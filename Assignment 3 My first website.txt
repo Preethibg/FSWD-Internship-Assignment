@@ -1,0 +1,131 @@
+Assignment Name: My First Website
+
+HTML Code (Personal Profile Webpage)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First Website</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+        }
+
+        .container {
+            width: 70%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        img {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        ul {
+            text-align: left;
+            margin-left: 30%;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Welcome to My Website</h1>
+
+    <img src="https://via.placeholder.com/150" alt="Profile Photo">
+
+    <h2>Preethi B G</h2>
+
+    <p>
+        Hello! I am an Electronics and Communication Engineering student passionate about 
+        technology, IoT, and software development.
+    </p>
+
+    <h3>My Skills</h3>
+    <ul>
+        <li>C Programming</li>
+        <li>C++</li>
+        <li>HTML</li>
+        <li>IoT Projects</li>
+    </ul>
+
+    <h3>My Hobbies</h3>
+    <ul>
+        <li>Painting</li>
+        <li>Crafting</li>
+        <li>Exploring Fashion</li>
+    </ul>
+
+    <h3>My Favorite Website</h3>
+    <p>
+        Visit my LinkedIn:
+        <a href="https://www.linkedin.com" target="_blank">Click Here</a>
+    </p>
+
+</div>
+
+</body>
+</html>
+
+Theory: My First Website
+🔹 Introduction
+
+A website is a collection of web pages created using HTML. In this assignment, a personal profile webpage is designed to display basic information such as name, image, skills, and interests.
+
+🔹 Objective
+
+To create a simple webpage using HTML elements like headings, images, links, and lists.
+
+🔹 HTML Elements Used
+Headings (<h1> to <h3>)
+Used to display titles and section headings.
+Paragraph (<p>)
+Used to write information about the user.
+Image (<img>)
+Displays profile picture using the src attribute.
+Lists (<ul>, <li>)
+Used to display skills and hobbies in bullet points.
+Links (<a>)
+Used to navigate to other websites.
+Div (<div>)
+Used to structure and group content.
+
+🔹 CSS Styling
+CSS is used to enhance the appearance of the webpage:
+Background color is added
+Text alignment is set
+Image is styled as a circle
+Box shadow is used for better design
+
+🔹 Features of the Webpage
+Displays personal profile
+Includes profile image
+Shows skills and hobbies
+Contains external link
+Simple and user-friendly design
+
+🔹 Advantages
+Easy to create and understand
+Helps in learning basic web development
+Can be expanded into a portfolio
+🔹 Conclusion
+
+This assignment helps in understanding the basic structure of a webpage and the use of important HTML elements. It is the first step towards building more advanced websites.

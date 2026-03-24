@@ -1,0 +1,136 @@
+Assignment Name: Product Listing UI
+
+Objective
+
+To build a mini e-commerce frontend with product cards and filtering functionality.
+
+🌐 1. HTML Code
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Listing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🛒 Product Store</h1>
+
+  <!-- Filter Buttons -->
+  <div class="filters">
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('electronics')">Electronics</button>
+    <button onclick="filterProducts('fashion')">Fashion</button>
+  </div>
+
+  <!-- Product Container -->
+  <div id="products" class="product-container"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+🎨 2. CSS Code
+body {
+  font-family: Arial;
+  text-align: center;
+}
+
+.filters button {
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 200px;
+  margin: 15px;
+  padding: 10px;
+}
+
+.card img {
+  width: 100%;
+}
+⚙️ 3. JavaScript Code
+// Product Data
+const products = [
+  { name: "Laptop", category: "electronics", price: 50000, image: "https://via.placeholder.com/200" },
+  { name: "Phone", category: "electronics", price: 20000, image: "https://via.placeholder.com/200" },
+  { name: "T-Shirt", category: "fashion", price: 500, image: "https://via.placeholder.com/200" },
+  { name: "Jeans", category: "fashion", price: 1200, image: "https://via.placeholder.com/200" }
+];
+
+// Display Products
+function displayProducts(items) {
+  const container = document.getElementById("products");
+  container.innerHTML = "";
+
+  items.forEach(product => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    card.innerHTML = `
+      <img src="${product.image}" />
+      <h3>${product.name}</h3>
+      <p>₹${product.price}</p>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+// Filter Function
+function filterProducts(category) {
+  if (category === "all") {
+    displayProducts(products);
+  } else {
+    const filtered = products.filter(p => p.category === category);
+    displayProducts(filtered);
+  }
+}
+
+// Initial Load
+displayProducts(products);
+📘 Theory: Product Listing UI
+🔹 Introduction
+
+A Product Listing UI is a core part of any e-commerce website. It displays products in the form of cards and allows users to filter them based on categories.
+
+🔹 Objective
+
+To create a dynamic UI that displays products and filters them using JavaScript.
+
+🔹 Concepts Used
+1. Arrays & Objects
+Store product data
+2. DOM Manipulation
+Dynamically create product cards
+3. Event Handling
+onclick="filterProducts('electronics')"
+Trigger filtering
+4. Filtering
+products.filter(p => p.category === category)
+Displays selected category
+🔹 How It Works
+Products stored in array
+Displayed as cards
+User clicks filter button
+Products are filtered and shown
+🔹 Features
+Product cards UI
+Category filters
+Dynamic rendering
+Simple design
+🔹 Advantages
+Easy to expand (add more products)
+Reusable UI
+Real-world application
+🔹 Conclusion
+
+The Product Listing UI demonstrates how JavaScript can be used to dynamically display and filter data, forming the base of e-commerce applications.

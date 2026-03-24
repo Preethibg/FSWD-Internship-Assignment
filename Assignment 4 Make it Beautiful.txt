@@ -1,0 +1,178 @@
+Assignment Name: Make It Beautiful
+
+HTML Code
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Beautiful Website</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #dfe9f3, #ffffff);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 70%;
+            margin: 40px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        img {
+            width: 160px;
+            border-radius: 50%;
+            border: 4px solid #3498db;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            color: #3498db;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: square;
+            text-align: left;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        a {
+            color: #ffffff;
+            background-color: #3498db;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            background-color: #2c3e50;
+        }
+
+        .section {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <img src="https://via.placeholder.com/150" alt="Profile Photo">
+
+    <h1>Preethi B G</h1>
+    <h2>ECE Student | Tech Enthusiast</h2>
+
+    <p>
+        Passionate about building innovative solutions using IoT and software development. 
+        I love combining creativity with technology.
+    </p>
+
+    <div class="section">
+        <h3>Skills</h3>
+        <ul>
+            <li>C Programming</li>
+            <li>C++</li>
+            <li>HTML & CSS</li>
+            <li>IoT Systems</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>Hobbies</h3>
+        <ul>
+            <li>Painting</li>
+            <li>Craft Designing</li>
+            <li>Exploring Fashion</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>Connect with Me</h3>
+        <p>
+            <a href="https://www.linkedin.com" target="_blank">Visit LinkedIn</a>
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+Theory: Make It Beautiful (CSS Styling)
+🔹 Introduction
+CSS (Cascading Style Sheets) is used to enhance the visual appearance of a webpage. It allows developers to add colors, fonts, spacing, and layout design to HTML elements.
+
+🔹 Objective
+To improve the previously created webpage by applying CSS styling such as colors, fonts, borders, and spacing.
+
+🔹 Styling Techniques Used
+Colors
+Background gradient applied to the page
+Text and heading colors for better readability
+Fonts
+Used modern font (Segoe UI) for clean appearance
+Borders
+Profile image styled with circular border
+Sections separated using lines
+Spacing
+Margin and padding used for proper layout
+Line spacing for readability
+Box Shadow
+Added shadow to container for depth effect
+Hover Effects
+Button color changes when mouse is hovered
+
+🔹 CSS Properties Used
+background
+color
+font-family
+margin, padding
+border, border-radius
+box-shadow
+transition
+
+🔹 Features of Styled Webpage
+Attractive and modern design
+Better readability
+User-friendly interface
+Interactive elements (hover effect)
+
+🔹 Advantages
+Improves user experience
+Makes website visually appealing
+Helps in professional web design
+
+🔹 Conclusion
+Styling a webpage using CSS enhances its appearance and usability. This assignment helps in understanding how design plays an important role in web development.

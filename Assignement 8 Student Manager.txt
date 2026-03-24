@@ -1,0 +1,86 @@
+Assignment Name: Student Manager
+
+JavaScript Code (Arrays & Objects + Average Calculation)
+
+👉 Run in browser console (F12 → Console)
+
+1. Storing Student Data
+// Array of student objects
+let students = [
+    { name: "Preethi", marks: [85, 90, 88] },
+    { name: "Shraddha", marks: [78, 82, 80] },
+    { name: "Rahul", marks: [92, 87, 91] }
+];
+
+2. Function to Calculate Average
+function calculateAverage(marks) {
+    let sum = 0;
+
+    for (let i = 0; i < marks.length; i++) {
+        sum += marks[i];
+    }
+
+    return sum / marks.length;
+}
+
+3. Display Student Averages
+students.forEach(function(student) {
+    let avg = calculateAverage(student.marks);
+    console.log(student.name + " Average Marks: " + avg);
+});
+
+4. Find Topper
+let topper = "";
+let highest = 0;
+
+students.forEach(function(student) {
+    let avg = calculateAverage(student.marks);
+
+    if (avg > highest) {
+        highest = avg;
+        topper = student.name;
+    }
+});
+
+console.log("Topper:", topper, "with average:", highest);
+
+Theory: Student Manager
+🔹 Introduction
+
+JavaScript provides powerful data structures like arrays and objects to store and manage data efficiently. In this assignment, student details and marks are stored and processed to calculate averages.
+
+🔹 Objective
+
+To use arrays and objects in JavaScript to store student marks and calculate their average scores.
+
+🔹 Concepts Used
+1. Arrays
+Used to store multiple values (marks).
+let marks = [85, 90, 88];
+2. Objects
+Used to store structured data (name + marks).
+let student = {
+    name: "Preethi",
+    marks: [85, 90, 88]
+};
+3. Loops
+Used to iterate through marks and students.
+Example: for loop and forEach()
+4. Functions
+Used to calculate average marks.
+5. Average Formula
+
+Average = Sum of Marks / Number of Subjects
+
+🔹 Features of the Program
+Stores multiple students
+Calculates average for each student
+Displays results in console
+Finds topper based on highest average
+🔹 Advantages
+Efficient data handling
+Easy to expand (add more students)
+Improves logical thinking
+🔹 Conclusion
+
+Using arrays and objects simplifies data management in JavaScript. This assignment demonstrates how to organize student data and perform calculations effectively.

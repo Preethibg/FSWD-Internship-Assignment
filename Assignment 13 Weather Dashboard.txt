@@ -1,0 +1,135 @@
+Assignment Name: Weather Dashboard
+
+React Code
+import React, { useState } from "react";
+
+function WeatherApp() {
+  const [city, setCity] = useState("");
+  const [weather, setWeather] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const API_KEY = "YOUR_API_KEY_HERE";
+
+  const fetchWeather = async () => {
+    if (city === "") return;
+
+    setLoading(true);
+    setError("");
+    setWeather(null);
+
+    try {
+      const response = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+      );
+
+      if (!response.ok) {
+        throw new Error("City not found");
+      }
+
+      const data = await response.json();
+      setWeather(data);
+    } catch (err) {
+      setError(err.message);
+    }
+
+    setLoading(false);
+  };
+
+  return (
+    <div style={styles.container}>
+      <h1>Weather Dashboard</h1>
+
+      <input
+        type="text"
+        placeholder="Enter city..."
+        value={city}
+        onChange={(e) => setCity(e.target.value)}
+      />
+
+      <button onClick={fetchWeather}>Get Weather</button>
+
+      {loading && <p>Loading...</p>}
+      {error && <p style={{ color: "red" }}>{error}</p>}
+
+      {weather && (
+        <div style={styles.card}>
+          <h2>{weather.name}</h2>
+          <p>🌡️ Temp: {weather.main.temp}°C</p>
+          <p>🌥️ Condition: {weather.weather[0].description}</p>
+          <p>💨 Wind: {weather.wind.speed} m/s</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+const styles = {
+  container: {
+    textAlign: "center",
+    marginTop: "50px",
+    fontFamily: "Arial"
+  },
+  card: {
+    marginTop: "20px",
+    padding: "15px",
+    border: "1px solid #ccc",
+    borderRadius: "10px",
+    width: "250px",
+    marginLeft: "auto",
+    marginRight: "auto"
+  }
+};
+
+export default WeatherApp;
+
+How to Get API Key
+
+👉 Go to: OpenWeatherMap Signup
+
+👉 Create free account
+👉 Copy API key and replace "YOUR_API_KEY_HERE"
+
+Theory: Weather Dashboard
+🔹 Introduction
+
+A Weather Dashboard is a web application that fetches real-time weather data from an external API and displays it dynamically.
+
+🔹 Objective
+
+To build a React application that retrieves weather data from an API and handles loading and error states.
+
+🔹 Concepts Used
+1. API (Application Programming Interface)
+Used to fetch real-time weather data
+Example: OpenWeatherMap API
+2. Fetch API
+fetch(url)
+Used to make HTTP requests
+3. useState Hook
+const [weather, setWeather] = useState(null);
+Stores fetched data
+4. Loading State
+setLoading(true);
+Shows loading message while fetching
+5. Error Handling
+catch(error)
+Displays error if API fails
+🔹 How It Works
+User enters city name
+Clicks "Get Weather"
+API request is sent
+Loading message appears
+Data is displayed OR error shown
+🔹 Features
+Real-time weather data
+Loading indicator
+Error handling
+Clean UI
+🔹 Advantages
+Uses real-world API
+Improves async programming skills
+Builds dynamic applications
+🔹 Conclusion
+
+The Weather Dashboard demonstrates how React interacts with APIs and handles asynchronous data effectively using loading and error states.

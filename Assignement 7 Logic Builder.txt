@@ -1,0 +1,90 @@
+Assignment Name: Logic Builder
+
+JavaScript Code (Number Guessing Game)
+Run this in browser console (F12 → Console)
+
+// Function to start the game
+function startGame() {
+    let randomNumber = Math.floor(Math.random() * 10) + 1; // Random number (1–10)
+    let attempts = 3;
+
+    while (attempts > 0) {
+        let guess = parseInt(prompt("Guess a number between 1 and 10:"));
+
+        if (guess === randomNumber) {
+            console.log("🎉 Correct! You guessed the number!");
+            return;
+        } 
+        else if (guess < randomNumber) {
+            console.log("Too low!");
+        } 
+        else {
+            console.log("Too high!");
+        }
+
+        attempts--;
+        console.log("Attempts left:", attempts);
+    }
+
+    console.log("❌ Game Over! The number was:", randomNumber);
+}
+
+// Start the game
+startGame();
+
+Bonus Version (Unlimited Attempts)
+
+function guessingGame() {
+    let number = Math.floor(Math.random() * 10) + 1;
+    let guess;
+
+    do {
+        guess = parseInt(prompt("Enter your guess (1-10):"));
+
+        if (guess < number) {
+            console.log("Too low!");
+        } else if (guess > number) {
+            console.log("Too high!");
+        } else {
+            console.log("🎉 Correct Guess!");
+        }
+
+    } while (guess !== number);
+}
+
+guessingGame();
+📘 Theory: Logic Builder (Number Guessing Game)
+🔹 Introduction
+
+JavaScript allows us to build interactive programs using logic such as conditions, loops, and functions. A number guessing game is a simple example to understand these concepts.
+
+🔹 Objective
+
+To create a number guessing game using JavaScript where the user guesses a randomly generated number.
+
+🔹 Concepts Used
+1. Random Number Generation
+Math.floor(Math.random() * 10) + 1;
+Generates a random number between 1 and 10.
+2. Conditional Statements (if-else)
+Used to compare user input with the correct number.
+Gives hints like “Too high” or “Too low”.
+3. Loops
+while loop → runs until attempts are over
+do-while loop → runs until correct guess
+4. Functions
+Used to organize and reuse code.
+5. User Input
+prompt() takes input from user.
+🔹 Game Features
+Random number each time
+Limited attempts (or unlimited version)
+Hint system (high/low)
+Console-based output
+🔹 Advantages
+Improves logical thinking
+Helps understand loops and conditions
+Makes learning interactive
+🔹 Conclusion
+
+The number guessing game demonstrates how JavaScript logic works using conditions, loops, and functions. It is a simple and effective way to build programming skills.

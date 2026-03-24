@@ -1,0 +1,75 @@
+Assignment Name: Mood Tracker
+
+React Code
+
+import React, { useState } from "react";
+
+function MoodTracker() {
+  const [mood, setMood] = useState("🙂");
+
+  return (
+    <div style={styles.container}>
+      <h1>Mood Tracker</h1>
+
+      <h2>Your Mood: {mood}</h2>
+
+      <div style={styles.buttons}>
+        <button onClick={() => setMood("😊")}>Happy</button>
+        <button onClick={() => setMood("😢")}>Sad</button>
+        <button onClick={() => setMood("😡")}>Angry</button>
+        <button onClick={() => setMood("😴")}>Tired</button>
+      </div>
+    </div>
+  );
+}
+
+const styles = {
+  container: {
+    textAlign: "center",
+    marginTop: "50px",
+    fontFamily: "Arial"
+  },
+  buttons: {
+    marginTop: "20px"
+  }
+};
+
+export default MoodTracker;
+
+Theory: Mood Tracker (React App)
+🔹 Introduction
+
+React is a JavaScript library used to build user interfaces. It uses components and state to create dynamic and interactive applications.
+
+🔹 Objective
+
+To create a simple Mood Tracker app where the UI updates based on user-selected mood using React state.
+
+🔹 Concepts Used
+1. React Components
+Components are reusable pieces of UI.
+Example: MoodTracker component
+2. useState Hook
+const [mood, setMood] = useState("🙂");
+Used to store and update data in React.
+mood → current state
+setMood → function to update state
+3. Event Handling
+Buttons use onClick to update mood.
+<button onClick={() => setMood("😊")}>Happy</button>
+🔹 How It Works
+Default mood is set
+User clicks a button
+State updates using setMood()
+UI automatically re-renders
+🔹 Features of the App
+Interactive UI
+Real-time updates
+Simple and user-friendly
+Uses emojis for visualization
+🔹 Advantages
+Easy to build interactive apps
+Efficient UI updates
+Reusable components
+🔹 Conclusion
+The Mood Tracker app demonstrates how React state works to dynamically update the UI. It is a simple example of building interactive applications using React.

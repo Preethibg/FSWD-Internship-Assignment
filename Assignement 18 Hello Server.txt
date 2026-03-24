@@ -1,0 +1,84 @@
+Assignment Name: Hello Server
+
+Objective
+
+To create a simple Node.js server that responds with different messages for different routes.
+1. Node.js Code (Basic Server)
+Create a file: server.js
+
+const http = require("http");
+
+const server = http.createServer((req, res) => {
+
+  if (req.url === "/") {
+    res.write("Welcome to Home Page");
+  } 
+  else if (req.url === "/about") {
+    res.write("This is About Page");
+  } 
+  else if (req.url === "/contact") {
+    res.write("Contact us at: example@gmail.com");
+  } 
+  else {
+    res.write("404 Page Not Found");
+  }
+
+  res.end();
+});
+
+server.listen(3000, () => {
+  console.log("Server running on http://localhost:3000");
+});
+▶️ How to Run
+Install Node.js
+Open terminal in project folder
+Run:
+node server.js
+Open browser:
+http://localhost:3000/
+http://localhost:3000/about
+http://localhost:3000/contact
+💡 Output
+/ → Welcome message
+/about → About page message
+/contact → Contact info
+Other → 404 message
+📘 Theory: Hello Server
+🔹 Introduction
+
+Node.js allows us to create backend servers using JavaScript. A server listens for requests and sends responses based on routes.
+
+🔹 Objective
+
+To build a basic HTTP server and handle multiple routes.
+
+🔹 Concepts Used
+1. Node.js HTTP Module
+const http = require("http");
+Used to create server
+2. Server Creation
+http.createServer((req, res) => {})
+Handles client requests
+3. Routing
+if (req.url === "/about")
+Different responses for different URLs
+4. Response Methods
+res.write();
+res.end();
+Send data to client
+🔹 How It Works
+Client sends request (browser)
+Server checks URL
+Sends corresponding response
+Displays in browser
+🔹 Features
+Multiple routes
+Dynamic responses
+Simple backend logic
+🔹 Advantages
+Easy to understand server basics
+Foundation for backend development
+Fast and lightweight
+🔹 Conclusion
+
+The Hello Server assignment demonstrates how to create a basic Node.js server and implement routing, forming the foundation of backend web development.

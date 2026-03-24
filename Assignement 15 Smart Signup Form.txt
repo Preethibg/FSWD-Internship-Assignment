@@ -1,0 +1,136 @@
+Assignment Name: Smart Signup Form
+
+React Code
+import React, { useState } from "react";
+
+function SignupForm() {
+  const [form, setForm] = useState({
+    email: "",
+    password: ""
+  });
+
+  const [errors, setErrors] = useState({});
+  const [success, setSuccess] = useState("");
+
+  // Handle input
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  // Validate form
+  const validate = () => {
+    let newErrors = {};
+
+    // Email validation
+    if (!form.email.includes("@")) {
+      newErrors.email = "Invalid email format";
+    }
+
+    // Password validation
+    if (form.password.length < 6) {
+      newErrors.password = "Password must be at least 6 characters";
+    }
+
+    return newErrors;
+  };
+
+  // Handle submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const validationErrors = validate();
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length === 0) {
+      setSuccess("Signup Successful!");
+    } else {
+      setSuccess("");
+    }
+  };
+
+  return (
+    <div style={styles.container}>
+      <h1>Signup Form</h1>
+
+      <form onSubmit={handleSubmit}>
+        <div>
+          <input
+            type="text"
+            name="email"
+            placeholder="Enter Email"
+            value={form.email}
+            onChange={handleChange}
+          />
+          <p style={{ color: "red" }}>{errors.email}</p>
+        </div>
+
+        <div>
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter Password"
+            value={form.password}
+            onChange={handleChange}
+          />
+          <p style={{ color: "red" }}>{errors.password}</p>
+        </div>
+
+        <button type="submit">Signup</button>
+      </form>
+
+      {success && <p style={{ color: "green" }}>{success}</p>}
+    </div>
+  );
+}
+
+const styles = {
+  container: {
+    textAlign: "center",
+    marginTop: "50px",
+    fontFamily: "Arial"
+  }
+};
+
+export default SignupForm;
+
+Theory: Smart Signup Form
+🔹 Introduction
+
+A signup form collects user data and validates it before submission. Validation ensures that the data entered is correct and secure.
+
+🔹 Objective
+
+To build a React signup form with email validation and password strength checking.
+
+🔹 Concepts Used
+1. useState Hook
+Stores form data and errors
+2. Form Handling
+onChange={handleChange}
+Updates input values dynamically
+3. Validation
+Checks user input before submission
+4. Email Validation
+form.email.includes("@")
+Ensures valid email format
+5. Password Validation
+form.password.length < 6
+Ensures strong password
+🔹 How It Works
+User enters email & password
+Clicks Signup
+Validation function checks input
+Errors are shown if invalid
+Success message if valid
+🔹 Features
+Real-time validation
+Error messages
+Success confirmation
+User-friendly UI
+🔹 Advantages
+Prevents invalid data
+Improves security
+Enhances user experience
+🔹 Conclusion
+
+The Smart Signup Form demonstrates how React handles form validation and user input efficiently using state and conditional rendering.

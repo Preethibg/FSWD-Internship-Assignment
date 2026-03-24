@@ -1,0 +1,94 @@
+Assignment Name: Console Challenge
+
+JavaScript Programs (Run in Browser Console)
+
+👉 Open browser → Press F12 → Console tab → Paste & run
+
+1. Addition
+let a = 10;
+let b = 5;
+console.log("Addition:", a + b);
+
+2. Subtraction
+console.log("Subtraction:", a - b);
+
+3. Multiplication
+console.log("Multiplication:", a * b);
+
+4. Division
+console.log("Division:", a / b);
+
+5. Modulus (Remainder)
+console.log("Modulus:", a % b);
+
+6. Simple Calculator using Function
+function calculator(x, y, operation) {
+    if (operation === "+") return x + y;
+    if (operation === "-") return x - y;
+    if (operation === "*") return x * y;
+    if (operation === "/") return x / y;
+    else return "Invalid Operation";
+}
+
+console.log(calculator(10, 5, "+"));
+console.log(calculator(10, 5, "-"));
+console.log(calculator(10, 5, "*"));
+console.log(calculator(10, 5, "/"));
+
+7. User Input Calculator
+let num1 = parseFloat(prompt("Enter first number:"));
+let num2 = parseFloat(prompt("Enter second number:"));
+let op = prompt("Enter operation (+, -, *, /):");
+
+let result;
+
+if (op === "+") result = num1 + num2;
+else if (op === "-") result = num1 - num2;
+else if (op === "*") result = num1 * num2;
+else if (op === "/") result = num1 / num2;
+else result = "Invalid Operation";
+
+console.log("Result:", result);
+
+Theory: Console Challenge
+🔹 Introduction
+
+JavaScript is a programming language used to add functionality to web pages. The browser console allows developers to run JavaScript code and test programs easily.
+
+🔹 Objective
+
+To perform basic calculator operations using JavaScript in the browser console.
+
+🔹 Concepts Used
+1. Console
+The console is a tool in the browser used to execute JavaScript code.
+console.log() is used to display output.
+2. Variables
+Used to store values.
+let a = 10;
+3. Operators
++ → Addition
+- → Subtraction
+* → Multiplication
+/ → Division
+% → Modulus
+4. Functions
+Used to reuse code.
+function add(a, b) {
+    return a + b;
+}
+
+5. User Input
+prompt() is used to take input from the user.
+🔹 Features of the Program
+Performs all basic arithmetic operations
+Uses functions for better structure
+Accepts user input
+Displays output in console
+🔹 Advantages
+Helps understand JavaScript basics
+Improves problem-solving skills
+Useful for debugging and testing
+🔹 Conclusion
+
+The console is a powerful tool for testing JavaScript programs. This assignment helps in understanding basic operations, functions, and user interaction in JavaScript.

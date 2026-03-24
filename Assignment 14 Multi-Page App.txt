@@ -1,0 +1,122 @@
+Assignment Name: Multi-Page App
+
+React Code
+
+npm install react-router-dom
+
+1. Main App (Routing Setup)
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./Home";
+import About from "./About";
+import Contact from "./Contact";
+
+function App() {
+  return (
+    <Router>
+      <nav style={styles.nav}>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
+}
+
+const styles = {
+  nav: {
+    display: "flex",
+    gap: "20px",
+    justifyContent: "center",
+    marginTop: "20px"
+  }
+};
+
+export default App;
+🔹 2. Home Page
+import React from "react";
+
+function Home() {
+  return (
+    <div style={{ textAlign: "center" }}>
+      <h1>Home Page</h1>
+      <p>Welcome to my React App</p>
+    </div>
+  );
+}
+
+export default Home;
+🔹 3. About Page
+import React from "react";
+
+function About() {
+  return (
+    <div style={{ textAlign: "center" }}>
+      <h1>About Page</h1>
+      <p>This is a multi-page React application.</p>
+    </div>
+  );
+}
+
+export default About;
+🔹 4. Contact Page
+import React from "react";
+
+function Contact() {
+  return (
+    <div style={{ textAlign: "center" }}>
+      <h1>Contact Page</h1>
+      <p>Email: example@gmail.com</p>
+    </div>
+  );
+}
+
+export default Contact;
+📘 Theory: Multi-Page App (React Router)
+🔹 Introduction
+
+React applications are typically Single Page Applications (SPA). React Router allows navigation between different pages without reloading the entire page.
+
+🔹 Objective
+
+To convert a React app into a multi-page SPA using React Router.
+
+🔹 Concepts Used
+1. SPA (Single Page Application)
+Loads a single HTML page
+Content updates dynamically
+2. React Router
+Library used for navigation
+3. BrowserRouter
+<BrowserRouter>
+Wraps the app and enables routing
+4. Routes & Route
+<Routes>
+  <Route path="/" element={<Home />} />
+</Routes>
+Defines different pages
+5. Link
+<Link to="/about">About</Link>
+Used for navigation without reload
+🔹 How It Works
+User clicks a link
+URL changes
+React Router loads corresponding component
+No full page refresh
+🔹 Features
+Fast navigation
+No page reload
+Better user experience
+🔹 Advantages
+Smooth transitions
+Efficient rendering
+Widely used in modern apps
+🔹 Conclusion
+
+React Router helps in building multi-page SPAs efficiently, improving navigation and performance.

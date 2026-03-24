@@ -1,0 +1,106 @@
+Assignment Name: Dynamic List App
+
+React Code
+
+import React, { useState } from "react";
+
+function TaskApp() {
+  const [tasks, setTasks] = useState([]);
+  const [input, setInput] = useState("");
+
+  // Add task
+  const addTask = () => {
+    if (input.trim() === "") return;
+    setTasks([...tasks, input]);
+    setInput("");
+  };
+
+  // Delete task
+  const deleteTask = (index) => {
+    const newTasks = tasks.filter((_, i) => i !== index);
+    setTasks(newTasks);
+  };
+
+  return (
+    <div style={styles.container}>
+      <h1>Task List</h1>
+
+      <div>
+        <input
+          type="text"
+          placeholder="Enter task..."
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <button onClick={addTask}>Add</button>
+      </div>
+
+      <ul>
+        {tasks.map((task, index) => (
+          <li key={index} style={styles.task}>
+            {task}
+            <button onClick={() => deleteTask(index)}>Delete</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+const styles = {
+  container: {
+    textAlign: "center",
+    marginTop: "50px",
+    fontFamily: "Arial"
+  },
+  task: {
+    margin: "10px",
+    display: "flex",
+    justifyContent: "space-between",
+    width: "300px",
+    marginLeft: "auto",
+    marginRight: "auto"
+  }
+};
+
+export default TaskApp;
+
+Theory: Dynamic List App
+🔹 Introduction
+
+React allows developers to build dynamic applications where the UI updates automatically. A task list app is a simple example where users can add and delete items dynamically.
+
+🔹 Objective
+
+To build a task management application using React hooks that allows adding and deleting tasks.
+
+🔹 Concepts Used
+1. useState Hook
+const [tasks, setTasks] = useState([]);
+Stores list of tasks
+Updates UI when state changes
+2. Handling Input
+Input field uses onChange to store user input
+3. Adding Data
+setTasks([...tasks, input]);
+Adds new task to array
+4. Deleting Data
+tasks.filter((_, i) => i !== index);
+Removes selected task
+🔹 How It Works
+User enters a task
+Clicks "Add" → task is stored in state
+Tasks are displayed in list
+Clicking "Delete" removes task
+🔹 Features of the App
+Add new tasks
+Delete tasks
+Dynamic UI updates
+Simple and interactive
+🔹 Advantages
+Demonstrates CRUD operations (Create, Delete)
+Uses React hooks effectively
+Real-time updates
+🔹 Conclusion
+
+The Dynamic List App shows how React manages dynamic data using hooks. It is a fundamental example for building interactive web applications.

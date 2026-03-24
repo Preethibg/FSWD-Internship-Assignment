@@ -1,0 +1,132 @@
+Assignment Name: Interactive Form
+
+Complete Code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+        }
+
+        .container {
+            width: 40%;
+            margin: 50px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2c3e50;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        .success {
+            color: green;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Registration Form</h2>
+
+    <form onsubmit="return validateForm()">
+
+        <input type="text" id="name" placeholder="Enter your name">
+        <div id="nameError" class="error"></div>
+
+        <input type="email" id="email" placeholder="Enter your email">
+        <div id="emailError" class="error"></div>
+
+        <input type="password" id="password" placeholder="Enter password">
+        <div id="passwordError" class="error"></div>
+
+        <button type="submit">Submit</button>
+
+        <div id="successMsg" class="success"></div>
+
+    </form>
+
+</div>
+
+<script>
+function validateForm() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    let valid = true;
+
+    // Clear previous messages
+    document.getElementById("nameError").innerText = "";
+    document.getElementById("emailError").innerText = "";
+    document.getElementById("passwordError").innerText = "";
+    document.getElementById("successMsg").innerText = "";
+
+    // Name validation
+    if (name === "") {
+        document.getElementById("nameError").innerText = "Name is required";
+        valid = false;
+    }
+
+    // Email validation
+    if (email === "" || !email.includes("@")) {
+        document.getElementById("emailError").innerText = "Enter a valid email";
+        valid = false;
+    }
+
+    // Password validation
+    if (password.length < 6) {
+        document.getElementById("passwordError").innerText = "Password must be at least 6 characters";
+        valid = false;
+    }
+
+    // Success message
+    if (valid) {
+        document.getElementById("successMsg").innerText = "Form submitted successfully!";
+    }
+
+    return false; // Prevent actual submission for demo
+}
+</script>
+
+</body>
+</html>

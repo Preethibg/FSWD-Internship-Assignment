@@ -1,0 +1,105 @@
+Assignment Name: Folder Architect
+
+Objective
+
+To create a structured folder system and retrieve/display data from it using JavaScript.
+
+✅ Project Idea
+
+👉 Create folders like:
+
+data/ → store JSON files
+components/ → UI parts
+app.js → main logic
+📂 Folder Structure
+project/
+│
+├── index.html
+├── app.js
+├── data/
+│   └── students.json
+├── styles/
+│   └── style.css
+📄 1. JSON Data (data/students.json)
+[
+  { "name": "Preethi", "marks": 85 },
+  { "name": "Shraddha", "marks": 90 },
+  { "name": "Rahul", "marks": 88 }
+]
+🌐 2. HTML File (index.html)
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Folder Architect</title>
+</head>
+<body>
+
+  <h1>Student Data</h1>
+  <button onclick="loadData()">Load Data</button>
+
+  <ul id="list"></ul>
+
+  <script src="app.js"></script>
+</body>
+</html>
+⚙️ 3. JavaScript (app.js)
+async function loadData() {
+  try {
+    const response = await fetch("data/students.json");
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    const data = await response.json();
+
+    const list = document.getElementById("list");
+    list.innerHTML = "";
+
+    data.forEach(student => {
+      const li = document.createElement("li");
+      li.textContent = student.name + " - " + student.marks;
+      list.appendChild(li);
+    });
+
+  } catch (error) {
+    console.error(error);
+  }
+}
+📘 Theory: Folder Architect
+🔹 Introduction
+
+Folder architecture refers to organizing project files into structured directories. It helps in better data management and code maintainability.
+
+🔹 Objective
+
+To understand how to structure folders and retrieve data from files using JavaScript.
+
+🔹 Concepts Used
+1. Folder Structure
+Organizes files logically
+Improves readability
+2. JSON (JavaScript Object Notation)
+Used to store data
+Easy to read and parse
+3. Fetch API
+fetch("data/students.json")
+Retrieves data from files
+4. DOM Manipulation
+Dynamically displays data on webpage
+🔹 How It Works
+Data stored in JSON file
+JavaScript fetches data
+Data is converted to object
+Displayed in HTML list
+🔹 Features
+Organized file structure
+Data retrieval
+Dynamic display
+🔹 Advantages
+Easy project management
+Scalable structure
+Reusable components
+🔹 Conclusion
+
+A well-structured folder system improves development efficiency and makes data handling easier using JavaScript.

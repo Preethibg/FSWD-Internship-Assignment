@@ -1,0 +1,141 @@
+Assignment Name: Responsive Hero Page
+
+HTML + CSS Code
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Hero Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            background: linear-gradient(to right, #6dd5ed, #2193b0);
+            color: white;
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text a {
+            text-decoration: none;
+            background: white;
+            color: #2193b0;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .hero img {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                max-width: 100%;
+            }
+
+            .hero img {
+                margin-top: 20px;
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="hero">
+
+    <div class="hero-text">
+        <h1>Hello, I'm Preethi</h1>
+        <p>
+            An Electronics and Communication Engineering student passionate about 
+            IoT, software development, and building innovative solutions.
+        </p>
+        <a href="#">Get Started</a>
+    </div>
+
+    <img src="https://via.placeholder.com/300" alt="Hero Image">
+
+</section>
+
+</body>
+</html>
+
+
+Theory: Responsive Hero Page
+🔹 Introduction
+
+A hero section is the main banner of a website that appears at the top. It usually contains a heading, description, and image. Making it responsive ensures it looks good on all devices like mobile, tablet, and desktop.
+
+🔹 Objective
+
+To design a responsive landing (hero) section using Flexbox that adjusts layout based on screen size.
+
+🔹 Concepts Used
+1. Flexbox
+Flexbox is a CSS layout model used to arrange elements in rows or columns.
+It makes alignment and spacing easier.
+
+Properties used:
+
+display: flex → activates flexbox
+justify-content → horizontal alignment
+align-items → vertical alignment
+2. Responsive Design
+Makes the webpage adaptable to different screen sizes.
+
+Used:
+
+@media query
+Changes layout when screen width is small
+3. Viewport Meta Tag
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+Ensures proper scaling on mobile devices
+
+🔹 How Responsiveness Works
+On desktop → text and image appear side by side
+On mobile → layout changes to column (one below another)
+
+🔹 Features of Hero Page
+Attractive gradient background
+Call-to-action button
+Image + text alignment
+Mobile-friendly layout
+
+🔹 Advantages
+Improves user experience
+Works on all devices
+Modern web design approach
+
+🔹 Conclusion
+Responsive design is essential in modern web development. Using Flexbox and media queries helps create flexible layouts that adapt to different screen sizes effectively.

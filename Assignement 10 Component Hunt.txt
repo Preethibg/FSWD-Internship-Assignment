@@ -1,0 +1,68 @@
+Assignment Name: Component Hunt
+
+1. Introduction
+
+Modern websites are built using components, where each part of the UI (User Interface) is divided into smaller reusable sections. This approach improves design, development, and maintenance.
+
+🔹 2. Objective
+
+To analyze a popular website and break it into smaller UI components and understand its structure.
+
+🔹 3. Selected Website Example
+
+You can take any popular website like:
+
+Amazon
+Flipkart
+Instagram
+
+👉 Here, let’s take Amazon Homepage as an example.
+
+🔹 4. Components Identified
+📌 Main Components of the Website
+Header / Navbar
+Logo
+Search bar
+Location
+Login / Account
+Cart
+Banner / Hero Section
+Large promotional images
+Offers / Ads
+Product Sections
+Product cards
+Categories (Electronics, Fashion, etc.)
+Sidebar / Filters (if present)
+Price filter
+Category filter
+Footer
+Links (About, Contact, Help)
+Social media icons
+🔹 5. Structure Diagram (Sketch)
+
+👉 Draw this in your notebook for marks 💯
+
+-------------------------------------------------
+|                  HEADER                       |
+| Logo | Search Bar | Login | Cart              |
+-------------------------------------------------
+|               HERO / BANNER                   |
+-------------------------------------------------
+|     PRODUCT SECTION (Cards Grid)              |
+|  [Item]  [Item]  [Item]  [Item]               |
+-------------------------------------------------
+|                  FOOTER                      |
+| About | Contact | Help | Social Links         |
+-------------------------------------------------
+🔹 6. Explanation
+Each part of the website is divided into independent components.
+Components can be reused across pages.
+Example: Header and Footer remain the same on all pages.
+Product cards are repeated components.
+🔹 7. Advantages of Component-Based Design
+Reusability of code
+Easy maintenance
+Better organization
+Faster development
+🔹 8. Conclusion
+Breaking a website into components helps in understanding its structure and makes development more efficient. It is widely used in modern frameworks like React and Angular.

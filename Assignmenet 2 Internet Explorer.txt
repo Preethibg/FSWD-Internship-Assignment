@@ -1,0 +1,71 @@
+1. Client–Server Architecture
+📌 Definition
+
+Client-server architecture is a network model where the client (user device) requests services or data, and the server provides the requested resources.
+
+📊 Diagram
+        CLIENT (User Side)
+   --------------------------
+   |  Web Browser           |
+   | (Chrome, Edge, etc.)  |
+   --------------------------
+              |
+              |  HTTP / HTTPS Request
+              v
+   --------------------------
+   |       INTERNET         |
+   --------------------------
+              |
+              v
+   --------------------------
+   |        SERVER          |
+   | (Web Server + Database)|
+   --------------------------
+              |
+              |  Response (HTML, CSS, JS)
+              v
+        CLIENT (Browser displays page)
+
+
+🔹 Explanation
+Client:
+The user’s device (laptop/mobile) with a web browser sends requests.
+Server:
+A powerful computer that stores websites, data, and applications.
+Internet:
+Medium through which data travels.
+Protocol (HTTP/HTTPS):
+Rules used for communication between client and server.
+
+
+🔹 2. What Happens When You Open a Website
+📌 Step-by-Step Process
+User enters URL
+Example: www.google.com in the browser.
+DNS Resolution
+The browser contacts DNS (Domain Name System) to convert the domain name into an IP address.
+Request Sent to Server
+Browser sends an HTTP/HTTPS request to the server using that IP address.
+Server Processing
+The server processes the request and retrieves the required webpage data.
+Server Response
+Server sends back files like:
+HTML (structure)
+CSS (design)
+JavaScript (functionality)
+Browser Rendering
+The browser interprets the files and displays the webpage.
+
+🔁 Flow Summary
+User → URL → DNS → Server Request → Server Response → Browser → Webpage Display
+
+🔹 3. Key Components Involved
+Browser: Chrome, Edge, Firefox
+DNS Server: Converts domain to IP
+Web Server: Hosts website
+Protocols: HTTP / HTTPS
+Internet: Communication medium
+
+🔹 4. Conclusion
+
+Client-server architecture enables communication between users and web servers efficiently. When a website is opened, multiple steps like DNS resolution, request processing, and browser rendering work together to display the webpage quickly and smoothly.
